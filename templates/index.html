@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+</head>
+<body>
+
+    <section>
+        <div class="container">
+            <h1>All Prods</h1>
+            {% for prods in prods %}
+            <h2>{{prods.name}}</h2>
+            <h2>{{prods.category}}</h2>
+                <img src="{{ prods.image.url }}" alt="burada shekil var">
+            {% endfor %}
+
+        </div>
+    </section>
+
+
+</body>
+</html>

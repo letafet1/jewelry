@@ -1,0 +1,12 @@
+from  django.urls import path
+from django.conf.urls import url
+from . import views
+
+app_name="post-api"
+
+urlpatterns=[
+    path("list/", views.prods_list_view, name="list"),
+    path("otherlist/", views.ProdsListView.as_view(), name="otherlist"),
+    path("theotherlist/", views.ProdsTheListView.as_view(), name="theotherlist"),
+
+]
